@@ -213,6 +213,10 @@ nav ul a:last-child {
 
 #tecnologias {
   grid-row: 7 / span 1;
+  grid-column: 1 / span 2;
+  padding-left: 20px;
+  padding-right: 20px;
+
 }
 
 #tecnologias h3 {
@@ -530,6 +534,10 @@ nav ul a:last-child {
 
   .inicio-imagen {
     display: none;
+  }
+
+  #inicio {
+    grid-template-rows: repeat(14, 1fr);
   }
 
   .presentation {
