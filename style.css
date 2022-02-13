@@ -30,6 +30,7 @@ body {
 
 /* Inicio Header */
 
+
 header {
   padding: 40px;
   height: 10vh;
@@ -93,6 +94,7 @@ nav ul a:last-child {
   padding-left: 15%;
   justify-content: center;
   align-content: center;
+  padding-left: 15%;
 }
 
 .presentation {
@@ -216,7 +218,7 @@ nav ul a:last-child {
   grid-column: 1 / span 2;
   padding-left: 20px;
   padding-right: 20px;
-
+  width: 85%;
 }
 
 #tecnologias h3 {
@@ -369,7 +371,8 @@ nav ul a:last-child {
 
 /* Media Queries */
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+
   header {
     height: auto;
   }
@@ -397,9 +400,35 @@ nav ul a:last-child {
     padding: 75px;
     border-radius: 10px;
   }
+
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+
+  header {
+    height: auto;
+  }
+
+  #tecnologias h3 {
+    font-size: 1.5rem;
+    margin: 50px 0;
+  }
+
+  #contenedor-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 5%;
+    gap: 40px;
+  }
+  
+  #contacto form {
+    margin-top: 5%;
+    width: 90%;
+    padding: 75px;
+    border-radius: 10px;
+  }
+
   #proyectos {
     margin-top: 20%;
   }
@@ -409,7 +438,8 @@ nav ul a:last-child {
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+  
   #contacto input,
   #contacto textarea {
     width: 80%;
@@ -421,9 +451,92 @@ nav ul a:last-child {
   #proyectos .section-title {
     padding-left: 5%;
   }
+
+  header {
+    height: auto;
+  }
+
+  #tecnologias h3 {
+    font-size: 1.5rem;
+    margin: 50px 0;
+  }
+
+  #contenedor-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 5%;
+    gap: 40px;
+  }
+
+    
+  #contacto form {
+    margin-top: 5%;
+    width: 90%;
+    padding: 75px;
+    border-radius: 10px;
+  }
+
+  #proyectos {
+    margin-top: 10%;
+  }
+
+  #contacto {
+    margin-top: 25%;
+  }
+
+
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+
+
+  #contacto input,
+  #contacto textarea {
+    width: 80%;
+  }
+
+  #contacto,
+  #about,
+  #inicio,
+  #proyectos .section-title {
+    padding-left: 5%;
+  }
+
+  header {
+    height: auto;
+  }
+
+  #tecnologias h3 {
+    font-size: 1.5rem;
+    margin: 50px 0;
+  }
+
+  #contenedor-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 5%;
+    gap: 40px;
+  }
+
+    
+  #contacto form {
+    margin-top: 5%;
+    width: 90%;
+    padding: 75px;
+    border-radius: 10px;
+  }
+
+  #proyectos {
+    margin-top: 10%;
+  }
+
+  #contacto {
+    margin-top: 25%;
+  }
+
+
   #tecnologias-icons {
     flex-wrap: wrap;
     flex-shrink: 1;
@@ -478,7 +591,30 @@ nav ul a:last-child {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+
+  header {
+    height: auto;
+  }
+
+  #inicio, #about, #contacto, #proyectos .section-title {
+    padding-left: 20px;
+  }
+
+  #proyectos .section-title {
+    padding-bottom: 5%;
+  }
+  
+  #proyectos {
+    margin-top: 15%;
+  }
+
+  #tecnologias-icons {
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    justify-content: space-evenly;
+  }
+
   #contenedor-proyectos {
     grid-template-columns: 1fr;
   }
@@ -488,30 +624,61 @@ nav ul a:last-child {
     width: 100%;
   }
 
+  #about {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    height: auto;
+  }
+
+
+  #about h2 {
+    grid-row: 1 / span 1;
+  }
+
+  #tecnologias {
+    padding-left: 0;
+  }
+
+  #about h3 {
+    font-size: 1.5rem;
+
+  }
+
+  
+  #about img {
+    grid-column: 1 / 1;
+    grid-row: 2 / span 3;
+
+  }
+
+
   #about p {
     font-size: 1.25rem;
     padding-right: 20px;
   }
 
   #about .about-introduction {
-    grid-row: 10 / span 1;
+    grid-row: 5 / span 1;
   }
 
   #about .about-role {
-    grid-row: 11 / span 2;
+    grid-row: 6 / span 2;
+    margin-top: 0;
   }
 
   #about .about-objective {
-    grid-row: 13 / span 2;
+    grid-row: 7 / span 2;
+    margin-top: 0;
+
   }
 
   #about .about-action {
-    grid-row: 17 / span 1;
+    grid-row: 9 / span 1;
   }
 
   #tecnologias {
     margin-top: 25px;
-    grid-row: 18 / span 1;
+    grid-row: 10 / span 1;
     grid-column: 1 / span 2;
   }
   nav {
@@ -521,6 +688,7 @@ nav ul a:last-child {
   nav ul {
     display: none;
   }
+
   nav ul a {
     width: 100%;
     margin-top: 20px;
@@ -572,19 +740,146 @@ nav ul a:last-child {
     transition: all 0.75s ease-out;
   }
 
+  #proyectos {
+    height: auto;
+  }
+
   #contacto form {
     margin-top: 5%;
     width: 90%;
     padding: 15px 30px;
     border-radius: 10px;
   }
+
 }
 
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 460px) and (max-width: 500px) {
+
+  header {
+    height: auto;
+  }
+
+  nav ul a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  #about {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    height: auto;
+  }
+
+
+  #about h2 {
+    grid-row: 1 / span 1;
+  }
+
+  #tecnologias {
+    padding-left: 0;
+  }
+
+  #about h3 {
+    font-size: 1.5rem;
+
+  }
+
+  
+  #about img {
+    grid-column: 1 / 1;
+    grid-row: 2 / span 3;
+
+  }
+
+  #about p {
+    font-size: 1.25rem;
+    padding-right: 20px;
+  }
+
+  #about .about-introduction {
+    grid-row: 5 / span 1;
+  }
+
+  #about .about-role {
+    grid-row: 6 / span 2;
+    margin-top: 0;
+  }
+
+  #about .about-objective {
+    grid-row: 7 / span 2;
+    margin-top: 0;
+
+  }
+
+  #about .about-action {
+    grid-row: 9 / span 1;
+  }
+
+  #tecnologias {
+    margin-top: 25px;
+    grid-row: 10 / span 1;
+    grid-column: 1 / span 2;
+  }
+
+  #contacto input,
+  #contacto textarea {
+    width: 100%;
+  }
+
+  #inicio {
+    height: auto;
+  }
+
+  .name {
+    grid-column: 1 / span 2;
+  }
+
+  #contacto form {
+    margin-top: 5%;
+    width: 90%;
+    padding: 15px 30px;
+    border-radius: 10px;
+  }
+  
+  #proyectos {
+    height: auto;
+  }
+
+  #inicio, #about, #contacto, #proyectos .section-title {
+    padding-left: 20px;
+  }
+
+  #proyectos .section-title {
+    padding-bottom: 5%;
+  }
+  
+  #proyectos {
+    margin-top: 15%;
+  }
+
+  #tecnologias-icons {
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    justify-content: space-evenly;
+  }
+
+  #contenedor-proyectos {
+    grid-template-columns: 1fr;
+  }
+
   #tecnologias h3 {
     font-size: 1.5rem;
+  }
+
+  .inicio-imagen {
+    display: none;
   }
 
   .section-title,
@@ -619,7 +914,164 @@ nav ul a:last-child {
   }
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (min-width: 412px) and (max-width: 460px) {
+
+  header {
+    height: auto;
+  }
+
+  nav ul a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  #about {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    height: auto;
+  }
+
+
+  #about h2 {
+    grid-row: 1 / span 1;
+  }
+
+  #tecnologias {
+    padding-left: 0;
+  }
+
+  #about h3 {
+    font-size: 1.5rem;
+
+  }
+
+  
+  #about img {
+    grid-column: 1 / 1;
+    grid-row: 2 / span 3;
+
+  }
+
+  #about p {
+    font-size: 1.25rem;
+    padding-right: 20px;
+  }
+
+  #about .about-introduction {
+    grid-row: 5 / span 1;
+  }
+
+  #about .about-role {
+    grid-row: 6 / span 2;
+    margin-top: 0;
+  }
+
+  #about .about-objective {
+    grid-row: 7 / span 2;
+    margin-top: 0;
+
+  }
+
+  #about .about-action {
+    grid-row: 9 / span 1;
+  }
+
+  #tecnologias {
+    margin-top: 25px;
+    grid-row: 10 / span 1;
+    grid-column: 1 / span 2;
+  }
+
+  #contacto input,
+  #contacto textarea {
+    width: 100%;
+  }
+
+  #inicio {
+    height: auto;
+  }
+
+  .name {
+    grid-column: 1 / span 2;
+  }
+
+  #contacto form {
+    margin-top: 5%;
+    width: 90%;
+    padding: 15px 30px;
+    border-radius: 10px;
+  }
+  
+  #proyectos {
+    height: auto;
+  }
+
+  #inicio, #about, #contacto, #proyectos .section-title {
+    padding-left: 20px;
+  }
+
+  #proyectos .section-title {
+    padding-bottom: 5%;
+  }
+  
+  #proyectos {
+    margin-top: 15%;
+  }
+
+  #tecnologias-icons {
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    justify-content: space-evenly;
+  }
+
+  #contenedor-proyectos {
+    grid-template-columns: 1fr;
+  }
+
+  #tecnologias h3 {
+    font-size: 1.5rem;
+  }
+
+  .inicio-imagen {
+    display: none;
+  }
+
+  .section-title,
+  .role {
+    grid-column: 1 / span 2;
+  }
+
+  #about {
+    padding-top: 25%;
+  }
+
+  #proyectos {
+    margin-top: 45%;
+  }
+
+  #contenedor-proyectos {
+    padding: 25px 0;
+  }
+
+  #contacto form {
+    width: 100%;
+    margin: 20px 50px 0 0;
+    border-radius: 0;
+  }
+
+  #contacto {
+    padding-left: 0;
+  }
+
+  #contacto h2 {
+    padding-left: 5%;
+  }
+
   #about .about-action {
     margin-top: 75px;
   }
@@ -634,6 +1086,163 @@ nav ul a:last-child {
 }
 
 @media only screen and (max-width: 412px) {
+
+  header {
+    height: auto;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav ul a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+  }
+
+  #about {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    height: auto;
+  }
+
+
+  #about h2 {
+    grid-row: 1 / span 1;
+  }
+
+  #tecnologias {
+    padding-left: 0;
+  }
+
+  #about h3 {
+    font-size: 1.5rem;
+
+  }
+
+  
+  #about img {
+    grid-column: 1 / 1;
+    grid-row: 2 / span 3;
+
+  }
+
+  #about p {
+    font-size: 1.25rem;
+    padding-right: 20px;
+  }
+
+  #about .about-introduction {
+    grid-row: 5 / span 1;
+  }
+
+  #about .about-role {
+    grid-row: 6 / span 2;
+    margin-top: 0;
+  }
+
+  #about .about-objective {
+    grid-row: 7 / span 2;
+    margin-top: 0;
+
+  }
+
+  #about .about-action {
+    grid-row: 9 / span 1;
+  }
+
+  #tecnologias {
+    margin-top: 25px;
+    grid-row: 10 / span 1;
+    grid-column: 1 / span 2;
+  }
+
+  #contacto input,
+  #contacto textarea {
+    width: 100%;
+  }
+
+  #inicio {
+    height: auto;
+  }
+
+  .name {
+    grid-column: 1 / span 2;
+  }
+
+  #contacto form {
+    margin-top: 5%;
+    width: 90%;
+    padding: 15px 30px;
+    border-radius: 10px;
+  }
+  
+  #proyectos {
+    height: auto;
+  }
+
+  #inicio, #about, #contacto, #proyectos .section-title {
+    padding-left: 20px;
+  }
+
+  #proyectos .section-title {
+    padding-bottom: 5%;
+  }
+  
+  #proyectos {
+    margin-top: 15%;
+  }
+
+  #tecnologias-icons {
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    justify-content: space-evenly;
+  }
+
+  #contenedor-proyectos {
+    grid-template-columns: 1fr;
+  }
+
+  #tecnologias h3 {
+    font-size: 1.5rem;
+  }
+
+  .inicio-imagen {
+    display: none;
+  }
+
+  .section-title,
+  .role {
+    grid-column: 1 / span 2;
+  }
+
+  #about {
+    padding-top: 25%;
+  }
+
+  #proyectos {
+    margin-top: 45%;
+  }
+
+  #contenedor-proyectos {
+    padding: 25px 0;
+  }
+
+  #contacto form {
+    width: 100%;
+    margin: 20px 50px 0 0;
+    border-radius: 0;
+  }
+
+  #contacto {
+    padding-left: 0;
+  }
+
+  #contacto h2 {
+    padding-left: 5%;
+  }
+
   .presentation {
     font-size: 1.5rem;
   }
@@ -690,7 +1299,156 @@ nav ul a:last-child {
     grid-column: 1 / span 2;
   }
 
+  
+  #tecnologias-icons {
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    justify-content: space-evenly;
+  }
+
+  
+  #tecnologias-icons i {
+    margin: 15px;
+  }
+
   #tecnologias h3 {
     font-size: 1.25rem;
   }
 }
+
+@media only screen and (orientation: landscape) and (max-width: 750px) {
+
+  .inicio-imagen {
+    display: none;
+  }
+
+  #inicio p {
+    margin: 15px 0;
+  }
+
+  .inicio-contacto {
+    padding: 4%;
+    margin-bottom: 15px;
+  }
+
+  #proyectos, #inicio, #about {
+    height: auto;
+  }
+
+
+  .presentation {
+    grid-row: 2 / span 1;
+
+  }
+  
+  .name {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 2;
+  }
+  
+  .role {
+    grid-row: 4 / span 1;
+  }
+  
+  .inicio-contacto {
+    grid-row: 6 / span 1;
+
+  }
+
+
+  .social-media {
+    grid-row: 8 / span 1;
+  }
+
+  #about .about-objective {
+    grid-row: 13 / span 2;
+  }
+
+  #about .about-action {
+    grid-row: 17 / span 1;
+  }
+
+  #tecnologias {
+    grid-row: 18 / span 1;
+  }
+
+}
+
+@media only screen and (orientation: landscape) and (min-width: 750px) and (max-width: 800px) {
+
+  #contacto, #proyectos {
+    height: auto;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 800px) and (max-width: 1000px)  {
+  #inicio, #proyectos, #about {
+    height: auto;
+  }
+  #about {
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  #contacto {
+    margin-top: 10%;
+  }
+}
+
+
+@media only screen and (orientation: landscape) and (min-width: 1000px) and (max-width: 1400px)  {
+  #inicio, #about, #contacto {
+    height: auto;
+    padding-left: 5%;
+  }
+
+  #proyectos {
+    height: auto;
+  }
+
+  #proyectos .section-title {
+    padding: 5%;
+  }
+
+  #about {
+    grid-template-rows: repeat(3, 1fr);
+  }
+  
+  #contacto {
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1400px) and (max-width: 1900px) {
+  #inicio, #about, #contacto {
+    height: auto;
+    padding-left: 5%;
+  }
+
+  #proyectos {
+    height: auto;
+  }
+
+  #proyectos .section-title {
+    padding: 5%;
+  }
+
+  #about {
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  #about #tecnologias {
+    margin-top: 50px;
+  }
+  
+  
+  #contacto {
+    margin-top: 10%;
+  }
+
+  #contacto form {
+    width: 100%;
+  }
+
+
+}
+
